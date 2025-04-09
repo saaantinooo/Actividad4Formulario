@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro LNR</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <h1>Registro para el Campeonato LNR</h1>
+    <form id="lnrForm">
+      <fieldset>
+        <legend>Datos del Equipo</legend>
+
+        <label>Nombre del equipo:
+          <input type="text" id="nombreEquipo" maxlength="30" required />
+        </label>
+
+        <label>Escuela/Institución:
+          <select id="escuela" required>
+            <option value="">Seleccione</option>
+            <option value="EEST N.º 1">EEST N.º 1</option>
+            <option value="Otra">Otra</option>
+          </select>
+        </label>
+
+        <label>Email del responsable:
+          <input type="email" id="email" required />
+          <span id="emailFeedback"></span>
+        </label>
+
+        <label>Foto de perfil:
+          <input type="file" id="fotoPerfil" accept="image/jpeg, image/png" required />
+          <div id="previewFoto"></div>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Categorías de Competencia</legend>
+        <div class="categorias-grid">
+          <label><input type="checkbox" name="categoria" value="sumo" class="categoria-checkbox" /> Sumo</label>
+          <label><input type="checkbox" name="categoria" value="minisumo" class="categoria-checkbox" /> Minisumo</label>
+          <label><input type="checkbox" name="categoria" value="carrera" class="categoria-checkbox" /> Carrera</label>
+          <label><input type="checkbox" name="categoria" value="futbol" class="categoria-checkbox" /> Fútbol</label>
+          <label><input type="checkbox" name="categoria" value="laberinto" class="categoria-checkbox" /> Laberinto</label>
+          <label><input type="checkbox" name="categoria" value="microsumo" class="categoria-checkbox" /> Microsumo</label>
+        </div>
+        <span id="categoriaFeedback"></span>
+      </fieldset>
+
+      <fieldset>
+        <legend>Documentación Técnica</legend>
+        <label>Diseño del robot:
+          <input type="file" id="disenoRobot" accept=".pdf, image/*" />
+        </label>
+        <label>Certificado de seguridad:
+          <input type="file" id="certificadoSeguridad" accept=".pdf, image/*" />
+        </label>
+      </fieldset>
+
+      <label><input type="checkbox" id="aceptoReglas" required /> Acepto las reglas del campeonato LNR</label>
+
+      <div class="botones">
+        <button type="submit" id="registrarBtn" disabled>Registrar Equipo</button>
+        <button type="reset" id="borrarBtn">Borrar Formulario</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
