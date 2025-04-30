@@ -1,0 +1,117 @@
+
+:root {
+  --bg-light: #f3e5f5; 
+  --bg-dark: #6c1b92;  
+  --text-light: #4a148c;
+  --text-dark: #e1bee7;
+  --primary: #ba68c8;
+  --secondary: #9c27b0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header, footer {
+  padding: 1em;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+}
+
+.dark-mode header, .dark-mode footer {
+  background: var(--secondary);
+}
+
+.calculator {
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.dark-mode .calculator {
+  background: #902ebd;
+  color: var(--text-dark);
+}
+
+.display {
+  font-size: 2.2em;
+  padding: 0.8em;
+  background: #ede7f6;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  text-align: right;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  color: var(--text-light);
+}
+
+.dark-mode .display {
+  background: #7b2da8;
+  color: var(--text-dark);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons button {
+  width: 22%;
+  padding: 1em;
+  margin: 0.3em;
+  font-size: 1em;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.history {
+  max-width: 400px;
+  margin: 1em auto;
+  background: #f3e5f5;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dark-mode .history {
+  background: #7427a0;
+  color: var(--text-dark);
+}
+
+#toggleMode, #toggleMusic {
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(175, 87, 187);
+  color: white;
+  cursor: pointer;
+}
+
+#volumeControl {
+  margin-top: 0.5em;
+}
